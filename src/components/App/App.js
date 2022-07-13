@@ -7,6 +7,7 @@ import {
 } from 'antd';
 import './App.less';
 import Cart from '../Cart/Cart';
+import EncryptedCard from '../EncryptedCard/EncryptedCard';
 
 const { Title } = Typography;
 
@@ -29,7 +30,14 @@ const App = () => (
       </Space>
     </section>
     <Divider style={{ marginBottom: 60 }}>Carrinho</Divider>
+
     <Cart />
+
+    <Divider style={{marginTop: 48, marginBottom: 20 }}>Criptografar Cartão</Divider>
+
+    <section style={{ textAlign: 'center', marginTop: 10, marginBottom: 45 }}>
+        <EncryptedCard />
+    </section>
   </>
 );
 
