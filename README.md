@@ -4,7 +4,7 @@ Criar um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 ```bash
 REACT_APP_EMAIL_SANDBOX=email_conta_sandbox_aqui
-REACT_APP_TOKEN_SANDBOX=seu_token__sandbox_aqui
+REACT_APP_TOKEN_SANDBOX=seu_token_sandbox_aqui
 ```
 
 # Dados para teste (SandBox)
@@ -16,6 +16,8 @@ REACT_APP_TOKEN_SANDBOX=seu_token__sandbox_aqui
 - Cartão:
     Número: 4111111111111111
     Bandeira: VISA Válido até: 12/2030 CVV: 123
+    Nome do dono: Jose Comprador
+    CPF do Dono: 38440987803
 
     ou: https://dev.pagseguro.uol.com.br/reference/testing-cards
 

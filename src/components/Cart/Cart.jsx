@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import {
     Form,
     Input,
@@ -14,17 +14,18 @@ function Cart() {
 
     const [form] = useForm();
     const [callLightbox, setCallLightbox] = useState(false)
+    const defaultValues = {"email": "jose@sandbox.pagseguro.com.br", "itemId": "SKU0001"}
 
     const handleFormSubmit = useCallback(
         async (form) => {
 
             const itemDto = {
-                itemId1: form.itemId,
-                itemDescription1: form.description,
-                itemAmount1: form.amount,
-                itemQuantity1: form.quantity,
+                id: form.itemId,
+                description: form.description,
+                amount: form.amount,
+                quantity: form.quantity,
                 shippingCost: form.shippingCost,
-                itemWeight1: 300
+                weight: 300
             };
 
             console.log(itemDto)
@@ -73,6 +74,10 @@ function Cart() {
         [callLightbox]
     );
 
+    useEffect(() => {
+        form.setFieldsValue(defaultValues)
+       }, [form, defaultValues])
+
     return (
         <>
             <Form
@@ -82,9 +87,7 @@ function Cart() {
                 wrapperCol={{ span: 8 }}>
 
                 <Form.Item name={'email'} label="E-mail">
-                    <Input
-                        defaultValue="jose@sandbox.pagseguro.com.br"                    
-                    />
+                    <Input />
                 </Form.Item>
 
                 <Form.Item name={'itemId'} label="Id">
