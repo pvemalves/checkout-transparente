@@ -12,6 +12,7 @@ function EncryptedCard() {
 
     const [form] = Form.useForm();
 
+    // eslint-disable-next-line
     const setTokenValue = (value) => {
         form.setFieldsValue({
             token: value

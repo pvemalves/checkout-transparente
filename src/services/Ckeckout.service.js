@@ -24,15 +24,10 @@ export function getAuhotizationCheckout(email, item) {
 
 export function getSessionCheckout() {
 
-    let authentication = {
-        "email": process.env.REACT_APP_EMAIL_SANDBOX,
-        "token": process.env.REACT_APP_TOKEN_SANDBOX 
-    }
-
-    return http.post('/checkout/session', authentication)
+    return http.post('/sessions')
     .then(resp => {
         console.log(resp.data)
-        return resp.data.id
+        return resp.data.session
     })
     .catch(error => {
         console.log(error)
