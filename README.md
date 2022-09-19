@@ -8,18 +8,21 @@ REACT_APP_TOKEN_SANDBOX=seu_token_sandbox_aqui
 ```
 
 # Dados para teste (SandBox)
+
 - Usuário cadastrado:
     - c11991480454038876562@sandbox.pagseguro.com.br
     - F105y4f69hu982p1
+
 - Usuário sem cadastro:
     - qualquer e-mail no formato xxxxxxx@sandbox.pagseguro.com.br
+    
 - Cartão:
-    Número: 4111111111111111
-    Bandeira: VISA Válido até: 12/2030 CVV: 123
-    Nome do dono: Jose Comprador
-    CPF do Dono: 38440987803
+    - **Número:** 4111111111111111
+    - **Bandeira:** VISA **Válido até:** 12/2030 **CVV:** 123
+    - **Nome do dono:** Jose Comprador
+    - **CPF do Dono:** 38440987803
 
-    ou: https://dev.pagseguro.uol.com.br/reference/testing-cards
+    - ou: https://dev.pagseguro.uol.com.br/reference/testing-cards
 
 # Use antd in create-react-app ✨
 
